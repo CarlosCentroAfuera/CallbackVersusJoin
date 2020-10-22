@@ -1,4 +1,5 @@
 public class ThreadUno extends Thread{
+
     ClasePrincipalUno clasePrincipalUno;
 
     public ThreadUno(ClasePrincipalUno clasePrincipalUno){
@@ -10,7 +11,8 @@ public class ThreadUno extends Thread{
         try {
             System.out.println("TheardUno - Entro");
             sleep(2000);
-            clasePrincipalUno.decirHola();
+            clasePrincipalUno.decirQueBienLoHeHecho();
+            sleep(2000);
             System.out.println("TheardUno - Salgo");
         } catch (InterruptedException e) {
             e.printStackTrace();

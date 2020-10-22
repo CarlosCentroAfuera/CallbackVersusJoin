@@ -1,6 +1,9 @@
 public class ClasePrincipalUno {
 
-    public ClasePrincipalUno() throws InterruptedException {
+    String nombre;
+
+    public ClasePrincipalUno(String nombre) throws InterruptedException {
+        this.nombre = nombre;
         System.out.println("ClasePrincipal - Entro");
         ThreadUno t1 = new ThreadUno(this);
         t1.start();
@@ -8,8 +11,8 @@ public class ClasePrincipalUno {
         System.out.println("ClasePrincipal - Salgo");
     }
 
-    public void decirHola(){
-        System.out.println("Hola");
+    public void decirQueBienLoHeHecho(){
+        System.out.println("Que bien lo ha hecho " + nombre);
     }
 
 }
