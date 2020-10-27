@@ -1,31 +1,27 @@
-public class ClasePrincipalTres implements ThreadTres.Descargable {
+public class ClasePrincipalCuatro implements ThreadTres.Descargable {
 
-    public ClasePrincipalTres() throws InterruptedException {
-        System.out.println("Comienza la descarga de internet");
+    public ClasePrincipalCuatro() throws InterruptedException {
+        System.out.println("Comienza la descarga de la intranet");
         ThreadTres t3 = new ThreadTres(this);
         t3.start();
         System.out.println("El usuario ya puede hacer otras cosas...");
 
     }
 
-    public void detallesDescargaIniciada(){
-        System.out.print("He comenzado la descarga a las " + System.currentTimeMillis());
-    }
 
     @Override
     public void descargaIniciada() {
-        detallesDescargaIniciada();
-        System.out.print("[");
+        System.out.print("(");
     }
 
     @Override
     public void bloqueDescargado(){
-        System.out.print("=");
+        System.out.print("--");
     }
 
     @Override
     public void descargaFinalizada(){
-        System.out.print("]");
+        System.out.print(")");
     }
 
     @Override

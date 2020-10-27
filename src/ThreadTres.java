@@ -1,8 +1,19 @@
 public class ThreadTres extends Thread{
 
-    ClasePrincipalTres c;
-    public ThreadTres(ClasePrincipalTres clasePrincipalTres) {
-        c = clasePrincipalTres;
+    Descargable c;
+
+    interface Descargable {
+        void descargaIniciada();
+
+        void bloqueDescargado();
+
+        void descargaFinalizada();
+
+        void mostrarNombreDelFichero(String nombreFichero);
+    }
+
+    public ThreadTres(Descargable descargable) {
+        c = descargable;
     }
 
     private String nombreFicheroDescargado;
